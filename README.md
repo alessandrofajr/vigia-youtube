@@ -12,4 +12,4 @@ YouTube Sentinel Bot can monitor channels on Google's video platform and send an
 
 It keeps track of the title, description, views, likes, and other information about each upload, keeping the data in a Google Sheets spreadsheet.
 
-Thanks to [@cuducos](https://github.com/cuducos) and [@turicas](https://github.com/turicas for the guidance and (https://github.com/gfelitti) for inspiring the work - [@novelodata](https://github.com/novelo-io) monitors extreme right wing channels in Brazil.
+Thanks to [@cuducos](https://github.com/cuducos) and [@turicas](https://github.com/turicas) for the guidance and (https://github.com/gfelitti) for inspiring the work - [@novelodata](https://github.com/novelo-io) monitors extreme right wing channels in Brazil.
