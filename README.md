@@ -6,7 +6,7 @@ Além disso, ele mantém um registro do título, descrição, visualizações, l
 
 Agradecimentos [@cuducos](https://github.com/cuducos) e [@turicas](https://github.com/turicas) pelas orientações durante o desenvolvimento do projeto e [@gfelitti](https://github.com/gfelitti) por inspirar o trabalho – a [@novelodata](https://github.com/novelo-io) mantém um monitoramento de canais de extrema direita no Brasil.
 
-## English description:
+### English description:
 
 YouTube Sentinel Bot can monitor channels on Google's video platform and send an email if any material has been removed, hidden, or deleted.
 
