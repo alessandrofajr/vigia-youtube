@@ -1,0 +1,8 @@
+datetime
+google-api-python-client
+gspread
+gspread_dataframe
+gunicorn
+pandas
+pytz
+sendgrid
