@@ -42,7 +42,7 @@ for video_id in videos_ids:
     res = youtube.videos().list(part='statistics', id=video_id).execute()
     stats += res['items']
     
-channel_title = [video['snippet']['channelTitle'] for video in videos] 
+channel_title = [video['snippet']['channelTitle'] for video in videos]  #Organizando as informações em listas
 videos_title = [video['snippet']['title'] for video in videos]
 url_thumbnails = [video['snippet']['thumbnails']['high']['url'] for video in videos]
 published_date = [video['snippet']['publishedAt'] for video in videos]
@@ -57,12 +57,12 @@ views = []
 comment = []
 
 for video in stats:
-    liked.append(video['statistics'].get('likeCount'))
+    liked.append(video['statistics'].get('likeCount')) 
     disliked.append(video['statistics'].get('dislikeCount'))
     views.append(video['statistics'].get('viewCount'))
     comment.append(video['statistics'].get('commentCount'))
         
-df = pd.DataFrame({
+df = pd.DataFrame({ #Transformando as listas em um dataframe
     'channel' :channel_title,
     'title':videos_title,
     'video_id':videoid,
@@ -76,7 +76,7 @@ df = pd.DataFrame({
     'comment':comment,
     'thumbnail': url_thumbnails})
 
-decoded_content = os.environ["GOOGLE_SHEETS_CREDENTIALS"]
+decoded_content = os.environ["GOOGLE_SHEETS_CREDENTIALS"] #Credenciais do Google Sheets
 decoded_credentials = base64.b64decode(decoded_content)
 credentials = json.loads(decoded_credentials)
 
@@ -84,5 +84,5 @@ spreadsheet_id = os.environ["GOOGLE_SHEET_ID"]
 service_account = gspread.service_account_from_dict(credentials)
 sh = service_account.open_by_key(spreadsheet_id)
 
-worksheet = sh.add_worksheet(title=f"{date.today()}", rows="1", cols="1")
+worksheet = sh.add_worksheet(title=f"{date.today()}", rows="1", cols="1") #Adicionando o dataframe em uma worksheet do Google Sheets
 set_with_dataframe(worksheet, df)
