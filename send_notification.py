@@ -21,7 +21,7 @@ sh = service_account.open_by_key(spreadsheet_id)
 worksheet_today = sh.worksheet(title=f"{date.today()}") #Identificando a worksheet do dia
 worksheet_yesterday = sh.worksheet(title=f"{date.today() - timedelta(days=1)}") #Identificando a worksheet do dia anterior
 
-today_list = worksheet_today.col_values(3) #Obtendo de todas as linhas da planilha da célula 3 (neste caso, são os IDs do vídeo)
+today_list = worksheet_today.col_values(3) #Obtendo de todas as linhas da planilha da coluna 3 (neste caso, são os IDs do vídeo)
 yesterday_list = worksheet_yesterday.col_values(3)
 
 today_set = set(today_list) #Transformando a lista em set
