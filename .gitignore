@@ -1,0 +1,23 @@
+# Ignore the virtual environment folder
+.venv/
+
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore the pip-installed packages
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Ignore the local development settings
+*.env
+
+# Ignore any other temporary or generated files
+*~
+__init__.pyc
+
+# Mac/OSX
+.DS_Store
+
+# Editors
+.vscode/
