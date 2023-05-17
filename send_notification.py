@@ -1,14 +1,13 @@
-from datetime import date, timedelta, datetime
-from gspread_dataframe import set_with_dataframe
-from sendgrid import SendGridAPIClient
-from sendgrid.helpers.mail import Mail
 import base64
-import gspread
-import pandas as pd
-
-
+from datetime import date, timedelta
 import json
 import os
+
+import gspread
+from gspread_dataframe import set_with_dataframe
+import pandas as pd
+from sendgrid import SendGridAPIClient
+from sendgrid.helpers.mail import Mail
 
 decoded_content = os.environ["GOOGLE_SHEETS_CREDENTIALS"] #Credenciais do Google Sheets
 decoded_credentials = base64.b64decode(decoded_content)
