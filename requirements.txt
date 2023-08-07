@@ -1,5 +1,5 @@
 cachetools==5.3.0
-certifi==2023.5.7
+certifi==2023.07.22
 charset-normalizer==3.1.0
 DateTime==5.1
 google-api-core==2.11.0
