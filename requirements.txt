@@ -12,7 +12,7 @@ gspread==5.8.0
 gspread-dataframe==3.3.0
 gunicorn==22.0.0
 httplib2==0.22.0
-idna==3.4
+idna==3.7
 numpy==1.24.3
 oauthlib==3.2.2
 pandas==2.0.1
